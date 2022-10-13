@@ -1,0 +1,17 @@
+import { useController } from "react-hook-form";
+
+const TextareaField = (props) => {
+  const { field } = useController(props);
+  return (
+    <div className="mt-2">
+      <textarea
+        {...field}
+        name={props.name}
+        placeholder={props.name}
+        className="appearance-none relative block w-full px-3 py-1.5 border border-gray-300 placeholder-gray-500 placeholder:font-light text-gray-900  focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+      />
+      <p className="text-xs text-red-600 ">{props.error?.message}</p>
+    </div>
+  );
+};
+export default TextareaField;
