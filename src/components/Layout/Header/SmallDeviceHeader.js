@@ -50,7 +50,6 @@ const SmallDeviceHeader = () => {
         sideBar={sideBarIsOpen}
         onCloseSideBar={() => setSideBarIsOpen(false)}
       />
-      )
     </Fragment>
   );
 };

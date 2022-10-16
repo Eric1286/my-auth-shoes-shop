@@ -11,11 +11,6 @@ const Header = () => {
   const totalProducts = products
     .map((product) => product.amount)
     .reduce((el, accu) => el + accu, 0);
-  const navLinkClass = (navData) => {
-    return navData.isActive
-      ? "leading-[5rem] text-base font-semibold pb-1 active"
-      : "leading-[5rem] text-base font-semibold pb-1";
-  };
 
   return (
     <header className="w-full h-16 lg:h-20 bg-white shadow-sm shadow-gray-200 fixed top-0 z-10">

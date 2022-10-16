@@ -15,7 +15,9 @@ const CartItem = ({ product }) => {
       <div className="flex flex-col md:flex-row w-1/3 items-center">
         <img src={product.image} width={140} height={140} alt={product.title} />
         <p className="md:pl-4 w-full truncate">
-          <Link to={`/products/14`}>Giày Vans Old Skool All Black</Link>
+          <Link to={`/products/${product.id}`}>
+            Giày Vans Old Skool All Black
+          </Link>
         </p>
       </div>
       <div className="w-2/3 flex justify-between items-center">
@@ -33,7 +35,7 @@ const CartItem = ({ product }) => {
               onDecre={() =>
                 dispatch(cartActions.decreaseItemsToCart(product.id))
               }
-              onUpdate={() => console.log("clgt")}
+              onUpdate={() => console.log(product)}
             />
           </div>
           <p className="w-full md:w-1/3 mb-1 md:mb-0 pl-4 ">
