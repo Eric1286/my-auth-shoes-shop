@@ -11,7 +11,7 @@ const Cart = () => {
     .map((product) => product.salePrice * product.amount)
     .reduce((el, accu) => el + accu, 0);
   return (
-    <div className="my-28">
+    <main className="my-28">
       <div className="container px-4 lg:px-8 mx-auto">
         {totalProducts === 0 ? (
           <EmptyCart />
@@ -39,28 +39,28 @@ const Cart = () => {
             </div>
             <div className="w-full lg:w-1/4 p-3 shadow-md">
               <div className="flex justify-between lg:flex-wrap xl:flex-nowrap text-base font-nomal">
-                <div className="lg:w-full">Tổng sản phẩm</div>
-                <div>{totalProducts}</div>
+                <p className="lg:w-full">Tổng sản phẩm</p>
+                <p>{totalProducts}</p>
               </div>
               <div className="flex justify-between lg:flex-wrap xl:flex-nowrap text-base font-nomal">
-                <div className="lg:w-full">Thành tiền</div>
-                <div>
+                <p className="lg:w-full">Thành tiền</p>
+                <p>
                   {new Intl.NumberFormat("vi-VN", {
                     style: "currency",
                     currency: "VND",
                   }).format(totalPrice)}
-                </div>
+                </p>
               </div>
               <div className="mt-5 flex flex-col">
                 <Link
                   to="/checkout"
-                  className="text-báe font-normal text-center  py-1  border border-spacing-2 border-black text-white bg-black hover:cursor-pointer hover:text-black hover:bg-white"
+                  className="text-base font-normal text-center  py-1  border border-spacing-2 border-black text-white bg-black hover:cursor-pointer hover:text-black hover:bg-white"
                 >
                   ĐẶT HÀNG
                 </Link>
                 <Link
                   to="/products"
-                  className="mt-3 text-báe font-normal text-center py-1  border border-spacing-2 border-black text-white bg-black hover:cursor-pointer hover:text-black hover:bg-white"
+                  className="mt-3 text-base font-normal text-center py-1  border border-spacing-2 border-black text-white bg-black hover:cursor-pointer hover:text-black hover:bg-white"
                 >
                   TIẾP TỤC MUA SẮM
                 </Link>
@@ -69,7 +69,7 @@ const Cart = () => {
           </div>
         )}
       </div>
-    </div>
+    </main>
   );
 };
 export default Cart;

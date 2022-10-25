@@ -60,7 +60,7 @@ const Checkout = () => {
     console.log({ ...data, ...orderInfor, total });
   };
   return (
-    <div className="my-28">
+    <main className="my-28">
       <div className="container px-4 lg:px-8 mx-auto">
         <form onSubmit={handleSubmit(submitFormHandler)}>
           <div className="grid grid-cols-1 xl:grid-cols-3 xl:grid-flow-col grid-flow-row xl:grid-rows-3 gap-4">
@@ -148,7 +148,7 @@ const Checkout = () => {
           </div>
         </form>
       </div>
-    </div>
+    </main>
   );
 };
 export default Checkout;
